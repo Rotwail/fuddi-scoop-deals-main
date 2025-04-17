@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import CouponDetail from "./pages/CouponDetail";
 import QRScan from "./pages/QRScan";
 import RedemptionConfirmation from "./pages/RedemptionConfirmation";
-import NotFound from "./pages/NotFound";
+import Register from "./pages/Register";
 
 const queryClient = new QueryClient();
 
@@ -23,11 +23,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Home />} />
           <Route path="/coupon/:id" element={<CouponDetail />} />
           <Route path="/scan/:id" element={<QRScan />} />
           <Route path="/redeem/:id" element={<RedemptionConfirmation />} />
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

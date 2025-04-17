@@ -1,45 +1,30 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../components/Logo';
-import Button from '../components/Button';
+import { Button } from "@/components/ui/button"
 import { UtensilsCrossed } from 'lucide-react';
 
 const Welcome: React.FC = () => {
   const navigate = useNavigate();
   
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-to-b from-white to-gray-100 animate-fade-in">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-to-b from-[#7D02FF] to-[#4B0199] animate-fade-in">
       <div className="w-full max-w-md flex flex-col items-center text-center">
         <div className="mb-6">
-          <Logo size="lg" />
+          <h1 className="text-6xl font-normal font-['Lobster'] text-white" style={{ fontWeight: 'normal' }}>Fuddi</h1>
         </div>
-        
-        <h1 className="text-4xl font-bold mb-2 text-gray-800">
-          Welcome to Fuddi
-        </h1>
-        
-        <p className="text-xl text-gray-600 mb-8">
-          Eat more, spend less
-        </p>
-        
-        <div className="w-full max-w-xs mb-10">
-          <img 
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop" 
-            alt="Food imagery" 
-            className="w-full h-auto rounded-lg shadow-lg"
-          />
-        </div>
-        
-        <Button 
-          variant="primary" 
-          size="lg" 
+        <div className="mb-12" /> 
+
+        <Button
+          className="bg-white text-[#4B0199] hover:bg-gray-100 border border-gray-300 rounded-lg shadow-md"
+          size="lg"
           fullWidth 
           onClick={() => navigate('/login')}
           icon={<UtensilsCrossed size={20} />}
         >
-          Get Started
+          Iniciar
         </Button>
+
       </div>
     </div>
   );
